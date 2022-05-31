@@ -1,0 +1,527 @@
+<!doctype html>
+<html>
+    <head>
+	    <title>Health Insights</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<meta name="viewport" content="width=device-width, initial-sacle=1.0">
+        <link rel="stylesheet" href="style.css"> 
+
+        <style>
+		    body{
+				
+			}
+			header{
+			    height: 100px;
+				width: 100%;
+			}
+			
+            
+			nav{
+			    height: 60px;
+				width: 1400px;
+			}
+			ul{
+	            display: flex;
+	       }
+		   li{
+	         	list-style-type: none; 
+	        	margin: 0 12px;
+		        font-size: 23px;
+	   	        position: relative;
+	        }
+			
+			a{
+		        color: #000;
+			}
+			a:link {
+                text-decoration: none;
+            }
+
+            a:visited {
+                text-decoration: none;
+            }
+			a:hover {
+                text-decoration: underline;
+				color: #47758f;
+            }
+			a:active {
+                text-decoration: underline;
+				color: #47758f;
+            }
+			article{
+			    height: 1950px;
+				width: 1400px;
+                background-color: #a7d4c5; 
+			} 
+			
+            .INSIGHTS{ 
+       			width: 80%; 
+                margin: auto; 
+                text-align: center; 
+                padding-top: 100px; 
+				margin-top: 5px;
+			} 
+            h1{ 
+                font-size: 36px; 
+                font-weight: 600; 
+			} 
+
+            p{ 
+                color: rgb(177, 180, 177); 
+                font-weight: 300; 
+                font-size: 15px; 
+                line-height: 22px; 
+                padding: 10px; 
+            } 
+            .row{ 
+                margin-top: 5%; 
+				display: flex; 
+				justify-content: space-between; 
+            } 
+           .insight-col{ 
+                flex-basis: 25%; 
+				border-radius: 20px; 
+				margin-bottom: 5%; 
+                padding: 5px 5px; 
+                box-sizing: border-box; 
+                transition: 0.5s; 
+			} 
+        h3{ 
+		    text-align: center; 
+            font-weight: 600; 
+            margin: 10px 0; 
+		} 
+
+        .insight-col:hover{ 
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.9); 
+		} 
+        .RECOMMENDATION{ 
+            width: 80%; 
+            margin: auto; 
+            text-align: center; 
+            padding-top: 100px; 
+		} 
+        h1{ 
+            font-size: 36px; 
+            font-weight: 600; 
+		} 
+        p{ 
+            color: rgb(177, 180, 177); 
+			font-weight: 300; 
+			font-size: 15px; 
+            line-height: 22px; 
+            padding: 10px; 
+        } 
+
+        .row{ 
+            margin-top: 5%; 
+            display: flex; 
+			justify-content: space-between; 
+		} 
+        .recommendation-col{ 
+		    flex-basis: 31%; 
+            border-radius: 10px; 
+            margin-bottom: 5%; 
+            padding: 20px 12px; 
+            box-sizing: border-box; 
+            transition: 0.5s;
+		} 
+        h4{ 
+            text-align: center; 
+			font-weight: 600; 
+			margin: 10px 0;
+        } 
+        .recommendation-col:hover{ 
+            box-shadow: 0 0 20px 0px rgba(0, 0, 0, 0.9); 
+		} 
+        .recommendation-col ul{ 
+            position: relative; 
+		} 
+        .recommendation-col ul li{ 
+            list-style: none; 
+            padding: 8px; 
+			width: 90%;
+		} 
+        @media(max-width: 700px) { 
+        .row{ 
+             flex-direction: column; 
+		}   
+    } 
+	        /* Dropdown Button */
+.dropbtn {
+  background-color:  #a3ccbe;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #79a395;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+			footer{
+			    height: 250px;
+				width: 1400px;
+				background:  #47a3ad;
+				display: flex;
+				margin-top: 2px;
+			}
+			footer ul{
+			    list-style: none;
+		        display: list-item;
+			}
+			.footer li a: hover{
+           		padding-right: 5px;
+				background-color: #5fe8d1;
+	        }
+		    .row{
+		        display: flex;
+		    }
+		    .footer-col{
+		        padding: ;
+		    }
+			.footer-col h4{
+			    font-size: 25px;
+		        text-transform: capitalize;
+		        margin-bottom: 30px;
+		        margin-left: 30px;
+                font-weight: 400;
+                position: relative;		
+				color: #ffffff;
+			}
+			p{
+			    color: #ffffff;
+				margin-left: 30px;
+				font-size: 15px;
+				font-family: cursive;
+			}
+			.fa{
+			    padding: 10px;
+                font-size: 30px;
+                width: 40px;
+                text-align: center;
+                text-decoration: none;
+			}
+			.fa:hover{
+			padding-top: 5px;
+			background-color: #5fe8d1;
+			}
+		</style>
+	</head>
+	<body>
+	    <header>
+		    <div>
+	            <img src="logo.png" style="height: 100px; width: 400px; float: left;">
+			</div>
+			<div id="google_translate_element"></div> 
+			
+			<script type="text/javascript"> 
+                function googleTranslateElementInit() { 
+                    new google.translate.TranslateElement(
+                        {pageLanguage: 'en'}, 
+                        'google_translate_element'
+                    ); 
+                } 
+            </script> 
+      
+            <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+			<div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn" style="margin-left: 800px; margin-top: 50px;">Dropdown</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="feedback.html">Rate our system</a>
+                    <a href="quiz.html">Quiz</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
+		</header>
+		<nav>
+		    <ul>
+			    <li><a href="index.html">HOME</a></li>
+				<li><a href="calculators.html">CALCULATORS</a></li>
+				<li><a href="insights.html">INSIGHTS</a></li>
+				<li><a href="food suggester.html">FOOD SUGGESTER</a></li>
+				<li><a href="food diary.html">FOOD DIARY</a></li>
+				<li><a href="contactus.html">CONTACT US</a></li>
+			</ul>
+		</nav>
+		<article>
+
+         <section class="INSIGHTS"> 
+            <h1>HEALTH INSIGHTS FOR YOU</h1> 
+
+             <P>Five Tips For A Healthy Lifestyle And More Health Knowledge</P> 
+
+ 
+
+            <div class="row"> 
+
+                <div class="insight-col"> 
+
+                    <h3>TAKE MULTIVITAMIN SUPPLEMENTS</h3> 
+
+                    <p>To make sure you have sufficient levels of nutrients, taking a daily multivitamin supplement is a good idea, 
+
+                        especially when you do not have a variety of vegetables and fruits at home.</p> 
+
+                </div> 
+
+ 
+
+                <div class="insight-col"> 
+
+                    <h3>DRINK WATER AND STAY HYDRATED, AND LIMIT SUGARED BEVERAGES</h3> 
+
+                    <p>Drink water regularly to stay healthy, but there is NO evidence that drinking water frequently (e.g. every 15 
+
+                        minutes) can help prevent any viral infection. </p> 
+
+                </div> 
+
+ 
+
+                <div class="insight-col"> 
+
+                    <h3>LIMIT UNHEALTHY FOOD AND EAT HEALTHY MEALS</h3> 
+
+                    <p>Do not forget to eat breakfast and choose a nutritious meal with more protein and fiber and less fat, sugar, and 
+
+                        calories. </p> 
+
+                </div> 
+
+                 
+
+                <div class="insight-col"> 
+
+                    <h3>EXERCISE REGULARLY AND BE PHYSICAL ACTIVE</h3> 
+
+                    <p>At this time, at-home workouts may be a good idea. But you can also walk your dog or run outside. Be sure you 
+
+                        know what’s going on in your area and if there are any restrictions or mandatory self-quarantines. </p> 
+
+                </div> 
+
+ 
+
+                <div class="insight-col"> 
+
+                    <h3>GET ENOUGH GOOD SLEEP</h3> 
+
+                    <p>There is a very strong connection between sleep quality and quantity and your immune system. You can keep your 
+
+                        immune system functioning properly by getting seven to eight hours of sleep each night. </p> 
+
+                </div> 
+
+            </div> 
+
+             
+
+ 
+
+        </section> 
+
+ 
+
+        <section> 
+
+            <section class="RECOMMENDATION"> 
+
+                <h1>FOOD RECOMMENDATION MADE JUST FOR YOU</h1> 
+
+                <P>Three Healthy Food Tips for Patients</P> 
+
+     
+
+                <div class="row"> 
+
+                    <div class="recommendation-col"> 
+
+                        <h4>FOOD FOR CANCER PATIENTS</h4> 
+
+                        <ul> 
+
+                            <li>Green Tea</li> 
+
+                            <li>Cruciferous Vegetables</li> 
+
+                            <li>Berries</li> 
+
+                            <li>Garlic</li> 
+
+                            <li>Turmeric</li> 
+
+                        </ul> 
+
+                    </div> 
+
+     
+
+     
+
+                    <div class="recommendation-col"> 
+
+                        <h4>FOOD FOR DIABETIC PATIENTS</h4> 
+
+                        <ul> 
+
+                            <li>Green Leafy Vegetables</li> 
+
+                            <li>Whole Grains</li> 
+
+                            <li>Berries</li> 
+
+                            <li>Beans</li> 
+
+                            <li>Turmeric</li> 
+
+                        </ul> 
+
+                    </div> 
+
+     
+
+     
+
+                    <div class="recommendation-col"> 
+
+                        <h4>FOOD FOR HEART PATIENTS</h4> 
+
+                        <ul> 
+
+                            <li>Fish i.e (salmon, tuna)</li> 
+
+                            <li>Avocado</li> 
+
+                            <li>Olive Oil</li> 
+
+                            <li>Whole Grains</li> 
+
+                            <li>Green Leafy Vegetables</li> 
+
+                        </ul> 
+
+                    </div> 
+
+                     
+
+     
+
+                     
+
+                </div> 
+
+                 
+
+ 
+
+        </section> 
+
+ 
+
+         
+
+    </body> 
+
+ 
+ 
+ 
+
+</html> 
+
+   
+
+ 
+		</article>
+		<footer>
+		   
+		     <div class="container2">
+			    <div class="row">
+				    <div class="footer-col">
+                     <h4>Revolutionary life</h4>
+					 <p>Food is a life source</p>
+					 <p>Calorie counting</p>
+					 <p>is a life sentence</p>
+					</div>
+					<div class="footer-col">
+					    <h4>Helpful links</h4>
+						<ul>
+						    <li><a href="calculators.html">Calculators</a></li>
+				            <li><a href="insights.html">Insights</a></li>
+							<li><a href="https://www.facebook.com/Revolutionary-Life-102898755782764">Invite friends</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+					    <h4>Copyright policy</h4>
+					        <a href=""></a>
+				    </div>
+				    <div class="footer-col">
+				        <h4>Privacy Rights</h4>
+				            <a href=""></a>
+				    </div>
+				    <div class="footer-col">
+				        <h4>Connect with us</h4>
+					        <a href="https://www.facebook.com/Revolutionary-Life-102898755782764" class="fa fa-facebook"></a>
+						    <a href="https://www.instagram.com/revolutinary_life/" class="fa fa-instagram"></a>
+                            <a href="https://twitter.com/Revolut96566044" class="fa fa-twitter"></a>
+					</div>
+				</div>
+			</div>
+	 
+		</footer>
+		<script>
+		    /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+		</script>
+	</body>
+    
+</html>

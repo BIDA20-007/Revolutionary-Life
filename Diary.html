@@ -1,0 +1,62 @@
+<!doctype html>
+<html>
+<head>
+    <title>My food diary</title>
+	<style>
+	    header{
+		    background-color: #6fad9f;
+			color: #eee;
+			padding: .5rem;
+			margin-bottom:10px
+		}
+	    body, h2,h3,h1{
+		    margin: 0;
+			padding: 0;
+		}
+		.wrapper{
+		    max-width: 500px;
+			margin: 0 auto;
+		}
+		.card{
+		    padding: 0.5rem 1rem;
+			border: 1px solid #eee;
+		}
+		.text-center{
+		    text-align: center;
+		}
+		textarea{
+		    width: 100%;
+		}
+		.text-l{
+		    text-align: left;
+		}
+	</style>
+</head>
+<body>
+    <header class="text-center">
+	    <h2>create diary</h2>
+	</header>
+	<div class="wrapper text-center">
+	    <textarea id="txt" rows="3" placeholder="what did you eat today?"></textarea>
+	<div class="text-l">	
+		<button onclick="getRs()">create</button>
+	</div>
+	</div>
+	<div id="rs" class="wrapper">
+	
+	</div>
+    <script>
+	function_(id){
+	    return document.getElementByid(id)
+	}
+	
+	function getRs(){
+        let txt = _('txt').value
+		const d = new date()
+		
+		_('rs').innerHTML += '<div><p>${txt}</p>
+		<small>${d.toLocaleDateString()}</small></div>'
+	}
+	</script>
+</body>
+</html>

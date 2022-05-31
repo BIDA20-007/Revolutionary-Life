@@ -1,0 +1,27 @@
+<!doctype html>
+<html>
+    <head>
+	    <title>Ideal Weight Calculator</title>
+		<style>
+		#outer{width:90%;
+		    max-width:600px;
+		    background:#fff;
+		    margin:0 auto;
+		}
+        #cover{border:2px solid #111;padding:15px 0}
+.main{table-layout:fixed;width:94%;border:0;text-align:left;border-collapse:collapse;margin:0 auto}
+.main td{padding:0 8px;vertical-align:middle;border:0}
+.main input{width:100%;border:1px solid #ccc;margin:2px 0;padding:0 2%;height:22px;text-align:right}.ac{text-align:center}.b{font-weight:bold}
+.main select{width:100%;border:1px solid #ccc;margin:2px 0;background:#fff;height:22px}.w50{width:50%}.main button{width:100%;font-weight:bold;margin:3px 0}.w60{width:60%}.w40{width:40%}</style>
+	</head>
+    <body>
+        <div id=outer><div class='ac b'>Ideal Body Weight Calculator</div><div id=cover><form name=iw><table class=main><col class=w60><col class=w40><tr><td>Measuring System<td><select id=msw onchange=msystem();><option value=metric>Metric (Kgs, Cms)<option value=us>US (lbs, inches)</select><tr><td>Sex<td><select id=sw><option value=m>Male<option value=f>Female</select><tr><td>Height <span id=thw>(Cms)</span><td><input id=hw><tr><td><button type=reset>Reset</button><td><button type=button onclick='bweight();'>Submit</button><tr><td>As per D R Miller Formula<td><input id=ibw class=op><tr><td>As per WHO recommendations<td><input id=ibw1 class=op><tr><td colspan=2 class='ac b' >This Calculator is suitable only for Adults over 18 years of age.</table></form></div></div>
+         
+		<script>var $=function( id ){return document.getElementById(id)};
+function msystem(){if( $('msw').value=='metric'){ $('thw').innerHTML=' (Cms)'}else{ $('thw').innerHTML=' (inches)'}}
+function bweight (){var ms= $('msw').value;var sex= $('sw').value;var height= $('hw').value;if(height==null || height.length==0 ){ $('ibw').value='Pl. enter data.'}else{ $('ibw').value=''}if(ms=='metric'&&height>0&&sex=='m'){ $('ibw').value=Math.round(56.2*1+(height*.39-152.4*.39)*1.41)*1+' Kgs'}else if(ms=='metric'&&height>0&&sex=='f'){ $('ibw').value=Math.round(53.1*1+(height*.39-152.4*.39)*1.36)*1+' Kgs'}else if(ms=='us'&&height>0&&sex=='m'){ $('ibw').value=Math.round(56.2*2.20462+(height*1-60)*1.41*2.20462)*1+' lbs'}else if(ms=='us'&&height>0&&sex=='f'){ $('ibw').value=Math.round(53.1*2.20462+(height*1-60)*1.36*2.20462)*1+' lbs'}if(ms=='metric'&&height>0){ $('ibw1').value=Math.round(18.5*(height*height/10000))+' Kgs-' +Math.round(25*(height*height/10000))+' Kgs'}else if(ms=='us'&&height>0){ $('ibw1').value=Math.round(18.5*(height*height)/703)+' lbs-' +Math.round(25*(height*height)/703)+' lbs'}}
+// Widget Code by https://karvitt.com/widgets/
+</script>
+
+    <body>
+</html>

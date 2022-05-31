@@ -1,0 +1,435 @@
+<!doctype html>
+<html lang="en-US">
+    <head>
+        <title>calorie needs Calculator</title>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <style>
+	      	
+			header{
+			    height: 100px;
+				width: 100%;
+			}
+			nav{
+			    height: 60px;
+				width: 1400px;
+				background: #dbd9d9;
+			}
+			ul{
+	            display: flex;
+	       }
+		   li{
+	         	list-style-type: none; 
+	        	margin: 0 12px;
+		        font-size: 23px;
+	   	        position: relative;
+	        }
+			a{
+		        color: #ffffff;
+			}
+			a:link {
+                text-decoration: none;
+            }
+
+            a:visited {
+                text-decoration: none;
+            }
+			a:hover {
+                text-decoration: underline;
+				color: #47758f;
+            }
+			a:active {
+                text-decoration: underline;
+				color: #47758f;
+            }
+			article{
+			    height: 1600px;
+				width: 1400px;
+				background: #ffffff;
+			}
+			
+			.calculatorcontainer{
+			    position: absolute;
+				height: 700px;
+				width: 1200px;
+				margin-top: 50px;
+				margin-left: 70px;
+				background: #f5f5f5;
+			}
+			.calculatorheader{
+			    position: absolute;
+			    height: 70px;
+				width: 1200px;
+				background: #a3ccbe;
+			}
+			.form-control, .form-select, .card, .btn
+                {				
+                    border-radius: 15px;
+                }
+
+                .form-control, .form-select
+                {
+                    background: #ffffff;
+                    color: #000;
+                }
+
+
+                input[type=checkbox], input[type=radio]
+                {
+                    width: 23px;
+                    height: 23px;
+                    display: flex;
+                    top: 0;
+                    position: relative;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    border: 1px solid #ffffff;
+                    overflow: hidden;
+                }
+
+                input[type=checkbox]
+                {
+                    border-radius: 3px;
+                }
+
+                input[type=radio]
+                {
+                    border-radius: 100%;
+                }
+
+                input[type=checkbox]:checked, input[type=radio]:checked
+                {
+                    border: none;
+                }
+
+                input[type=checkbox]:checked:after, input[type=radio]:checked:after
+                {
+                    content: "\f00c";
+                    font-family: "Font Awesome 5 Pro";
+                    font-weight: 900;
+                    left: 0;
+                    position: relative;
+                    top: 0;
+                    font-size: 15px;
+                    color: #000;
+                    background: #ffffff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    width: 100%;
+                    height: 100%;
+			}
+           
+	       
+			footer{
+			    height: 400px;
+				width: 1400px;
+				background: #a3ccbe;
+				display: flex;
+			}
+			footer ul{
+			    list-style: none;
+		        display: list-item;
+			}
+			.footer li a: hover{
+           		padding-right: 5px;
+				background-color: #5fe8d1;
+	        }
+		    .row{
+		        display: flex;
+		    }
+		    .footer-col{
+		        padding: ;
+		    }
+			.footer-col h4{
+			    font-size: 25px;
+		        text-transform: capitalize;
+		        margin-bottom: 30px;
+		        margin-left: 30px;
+                font-weight: 400;
+                position: relative;		
+				color: #ffffff;
+			}
+			p{
+			    color: #ffffff;
+				margin-left: 30px;
+				font-size: 15px;
+				font-family: cursive;
+			}
+			.fa{
+			    padding: 10px;
+                font-size: 30px;
+                width: 40px;
+                text-align: center;
+                text-decoration: none;
+			}
+			.fa:hover{
+			padding-top: 5px;
+			background-color: #5fe8d1;
+			}
+		</style>
+	</head>
+	<body>
+	    
+	    <header>
+		    <div>
+	            <img src="logo.png" style="height: 100px; width: 400px; float: left;">
+			</div>
+			<div id="google_translate_element"></div> 
+			
+			<script type="text/javascript"> 
+                function googleTranslateElementInit() { 
+                    new google.translate.TranslateElement(
+                        {pageLanguage: 'en'}, 
+                        'google_translate_element'
+                    ); 
+                } 
+            </script> 
+      
+            <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+		</header>
+		<nav>
+		    <ul>
+			    <li><a href="index.html">HOME</a></li>
+				<li><a href="calculators.html">CALCULATORS</a></li>
+				<li><a href="insights.html">INSIGHTS</a></li>
+				<li><a href="dashboard.html">DASHBOARD</a></li>
+				<li><a href="food diary.html">FOOD DIARY</a></li>
+				<li><a href="contactus.html">CONTACT US</a></li>
+				<li><a href="logout.php">Logout</a></li>
+			</ul>
+		</nav>
+		<article>
+		    <section>
+			    <div class="calculatorcontainer">
+				    <div class="calculatorheader">
+					    <ul>
+			                <li><a href="weight.html">IDEAL WEIGHT</a></li>
+				            <li><a href="calorie and bmi.html">CALORIE AND BMI</a></li>
+				            <li><a href="nutrition.html">NUTRITION NEEDS</a></li>
+				            <li><a href="food calorie.html">FOOD CALORIE INTAKE</a></li>
+			            </ul>
+					</div>	
+					<form class="CalculateForm" method="post">
+                <div class="card bg-dark text-white">
+                    <h4 class="text-center text-danger card-header mb-4">Calorie Calculator</h4>
+                    <div class="card-body">
+                        <div class="row g-5">
+                            <div class="col-sm-4">
+                                <div>
+                                    <h5>Age*</h5>
+                                    <input class="form-control text-end" name="age" required="" type="number" value="25" />
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div>
+                                    <h5>Gender*</h5>
+                                    <div class="form-control">
+                                        <div class="row">
+                                            <div class="col-6 d-flex align-items-center">
+                                                <input checked="" id="gender_male" name="gender" required="" type="radio" value="0" />
+                                                <label class="ms-2">Male</label>
+                                            </div>
+                                            <div class="col-6 d-flex align-items-center">
+                                                <input id="gender_female" name="gender" required="" type="radio" value="1" />
+                                                <label class="ms-2">Female</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-4">
+                                <div>
+                                    <h5>Body Fat*</h5>
+                                    <div class="d-flex align-items-center">
+                                        <input class="form-control text-end" name="bodyFat" required="" type="number" value="20" />
+                                        <span class="btn ms-1 bg-warning">%</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div>
+                                    <h5>Height*</h5>
+                                    <div class="d-flex align-items-center">
+                                        <input class="form-control text-end" name="height" required="" type="number" value="180" />
+                                        <span class="btn ms-1 bg-warning text-nowrap">cm</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div>
+                                    <h5>Weight*</h5>
+                                    <div class="d-flex align-items-center">
+                                        <input class="form-control text-end" name="weight" required="" type="number" value="65" />
+                                        <span class="btn ms-1 bg-warning text-nowrap">kg</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div>
+                                <h5>Activity*</h5>
+                                <select class="form-select" name="activity" required="">
+                                    <option value="1">Basal Metabolic Rate (BMR)</option>
+                                    <option value="1.2">Sedentary: little or no exercise</option>
+                                    <option value="1.375">Light: exercise 1-3 times/week</option>
+                                    <option selected="" value="1.465">Moderate: exercise 4-5 times/week</option>
+                                    <option value="1.55">Active: daily exercise or intense exercise 3-4 times/week</option>
+                                    <option value="1.725">Very Active: intense exercise 6-7 times/week</option>
+                                    <option value="1.9">Extra Active: very intense exercise daily, or physical job</option>
+                                </select>
+                            </div>
+                            <div class="col-sm-6">
+                                <div>
+                                    <h5>Result Unit*</h5>
+                                    <div class="form-control">
+                                        <div class="row">
+                                            <div class="col-6 d-flex align-items-center">
+                                                <input checked="" id="unit_calories" name="unit" required="" type="radio" value="Calories" />
+                                                <label class="ms-2">Calories</label>
+                                            </div>
+                                            <div class="col-6 d-flex align-items-center">
+                                                <input id="unit_kilo" name="unit" required="" type="radio" value="kilojoules" />
+                                                <label class="ms-2">kilojoules</label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-sm-6">
+                                <div>
+                                    <h5>BMR estimation formula*</h5>
+                                    <div class="row g-3">
+                                        <div class="col-sm-12 d-flex align-items-center">
+                                            <input checked="" id="Mifflin_St_Jeor" name="formula" required="" type="radio" value="0" />
+                                            <label class="ms-2">Mifflin St Jeor</label>
+                                        </div>
+                                        <div class="col-sm-12 d-flex align-items-center">
+                                            <input id="Revised_Harris_Benedict" name="formula" required="" type="radio" value="1" />
+                                            <label class="ms-2">Revised Harris-Benedict</label>
+                                        </div>
+                                        <div class="col-sm-12 d-flex align-items-center">
+                                            <input id="Katch_McArdle" name="formula" required="" type="radio" value="2" />
+                                            <label class="ms-2">Katch-McArdle</label>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ans_calculate"></div>
+                    <div class="text-center mt-4 card-footer">
+                        <button class="btn btn-success" onclick="calculateCalorie(this)" type="button">
+                            <i class="fas fa-calculator me-3"></i>
+                            Calculate
+                        </button>
+                    </div>
+                </div>
+        </form>
+				</div>		
+			</section>			
+			
+		</article>
+		<footer>
+		   
+		     <div class="container2">
+			    <div class="row">
+				    <div class="footer-col">
+                     <h4>Revolutionary life</h4>
+					 <p>Food is a life source</p>
+					 <p>Calorie counting</p>
+					 <p>is a life sentence</p>
+					</div>
+					<div class="footer-col">
+					    <h4>Helpful links</h4>
+						<ul>
+						    <li><a href="">Calculators</a></li>
+				            <li><a href="">Insights</a></li>
+							<li><a href="">Invite friends</a></li>
+						</ul>
+					</div>
+					<div class="footer-col">
+					    <h4>Copyright policy</h4>
+					        <a href=""></a>
+				    </div>
+				    <div class="footer-col">
+				        <h4>Privacy Rights</h4>
+				            <a href=""></a>
+				    </div>
+				    <div class="footer-col">
+				        <h4>Connect with us</h4>
+					        <a href="" class="fa fa-facebook"></a>
+						    <a href="https://www.instagram.com/revolutinary_life/" class="fa fa-instagram"></a>
+                            <a href="https://twitter.com/Revolut96566044" class="fa fa-twitter"></a>
+					</div>
+				</div>
+			</div>
+			
+	 
+		</footer>
+		<script>
+                function calculateCalorie(obj)
+                {
+                    const age = obj.form.age.value;
+                    const gender = obj.form.gender.value;
+                    const bodyFat = obj.form.bodyFat.value;
+                    const height = obj.form.height.value;
+                    const weight = obj.form.weight.value;
+                    const activity = obj.form.activity.value;
+                    const unit = obj.form.unit.value;
+                    const formula = obj.form.formula.value;
+
+                    let BMR = '';
+                    if(formula == 0) // Mifflin
+                    {
+                        BMR = Mifflin(gender, age, bodyFat, height, weight);
+                    }
+                    else if(formula == 1) // Harris
+                    {
+                        BMR = Harris(gender, age, bodyFat, height, weight);
+                    }
+                    else if(formula == 2) // Katch
+                    {
+                        BMR = Katch(bodyFat, weight);
+                    }
+
+                    let ret = parseFloat(BMR)*parseFloat(activity);
+                    if(unit == 'kilojoules')
+                    {
+                        ret = (ret*4.1868);
+                    }
+
+                    document.querySelector(".ans_calculate").innerHTML = '<div class="container"><h4 class="text-center form-control my-3 text-danger fs-4">You should consume <span class="text-white">'+Math.ceil(ret)+' '+unit+'/day </span> of calorie to maintain your weight.</h4></div>';
+                }
+
+                function Mifflin(gender, age, bodyFat, height, weight)
+                {
+                    let BMR = (10*weight) + (6.25*height) - (5*age) + 5;
+                    if(gender == 1) // Female
+                    {
+                        BMR = (10*weight) + (6.25*height) - (5*age) - 161;
+                    }
+
+                    return BMR;
+                }
+
+                function Harris(gender, age, bodyFat, height, weight)
+                {
+                    let BMR = (13.397*weight) + (4.799*height) - (5.677*age) + 88.362;
+                    if(gender == 1) // Female
+                    {
+                        BMR = (9.247*weight) + (3.098*height) - (4.330*age) + 447.593;
+                    }
+
+                    return BMR;
+                }
+
+                function Katch(bodyFat, weight)
+                {
+                    let BMR = 370 + 21.6*(1 - (bodyFat/100))*weight;
+
+                    return BMR;
+                }
+            </script>
+		
+		
+    </body>
+</html>	
