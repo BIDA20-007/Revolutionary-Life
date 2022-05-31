@@ -1,20 +1,30 @@
 <!doctype html>
-<html>
+<html lang="en-US">
     <head>
+	    <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>Home</title>
 		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	    <link rel="stylesheet" href="static/css/chat.css">
+        <link rel="stylesheet" href="static/css/home.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+		
         <style>
-	      	body{
-				
-			}
+	      	html {
+                scroll-behavior: smooth;
+                font-family: Helvetica, sans-serif, Arial;
+            }
 			header{
-			    height: 100px;
+			    height: 90px;
 				width: 100%;
 			}
 			nav{
 			    height: 60px;
 				width: 1400px;
-				background: #4b9c89;
+				
+			
 			}
 			ul{
 	            display: flex;
@@ -25,36 +35,44 @@
 		        font-size: 23px;
 	   	        position: relative;
 	        }
-			li:hover{
-			    padding-top: 8px;
-		        background-color: #33bd9d;
-			 
-			}
 			a{
-			    text-decoration: none;
-		        color: #ffffff;
-			
+		        color: #000;
 			}
+			a:link {
+                text-decoration: none;
+            }
+
+            a:visited {
+                text-decoration: none;
+            }
+			a:hover {
+                text-decoration: underline;
+				color: #47758f;
+            }
+			a:active {
+                text-decoration: underline;
+				color: #47758f;
+            }
 			article{
-			    height: 1600px;
+			    height: 1800px;
 				width: 1400px;
-				background: #ffffff;
+				background: #f5f5f5;
 			}
 			.imagecontainer{
 			    position: absolute;
-			    height: 800px;
-				width: 45%;
+			    height: 400px;
+				width: 450px;
 			}
 			.slider{
                 width: 100%;
-                height: 800px;
+                height: 450px;
                 border-radius: 10px;
                 overflow: hidden;
             }
   
             .slides{
                 width: 500%;
-                height: 500px;
+                height: 450px;
                 display: flex;
             }
   
@@ -69,7 +87,7 @@
   
             .slide img{
                 width: 100%;
-                height: 800px;
+                height: 450px;
             }
   
             /*css for manual slide navigation*/
@@ -116,20 +134,7 @@
   
            /*css for automatic navigation*/
   
-            .navigation-auto{
-                position: absolute;
-                display: flex;
-                width: 800px;
-                margin-left: 200px;
-                margin-top: 750px;
-            }
-  
-            .navigation-auto div{
-                border: 2px solid #40D3DC;
-                padding: 5px;
-                border-radius: 10px;
-                transition: 1s;
-            }
+           
   
             .navigation-auto div:not(:last-child){
                 margin-right: 40px;
@@ -153,49 +158,128 @@
 			.imagecontainer1{
 			    position: absolute;
 			    height: 265px;
-				width: 17%;
-				margin-left: 620px;
-				margin-top: 2px;
+				width: 500px;
+				margin-left: 100px;
+				margin-top: 50px;
+				right: 25%;
+				background: #c2cfce;
+				border-radius: 8px;
 			}
+			
 			.imagecontainer2{
 			    position: absolute;
-			    height: 330px;
-				width: 17%;
-				margin-left: 620px;
-				margin-top: 400px;
+			    height: 400px;
+				width: 20%;
+				margin-left: 900px;
+				margin-top: 500px;
+				background: #47a3ad;
+				border-radius: 25px;
 			}
 			.imagecontainer3{
 			    position: absolute;
 			    height: 300px;
-				width: 20%;
-				margin-left: 870px;
-				margin-top: 100px;
+				width: 40%;
+				margin-left: 910px;
+				margin-top: 190px;
 			}
-			.calculatorcontainer{
+			.imagecontainer4{
+			    position: absolute;
+			    height: 400px;
+				width: 20%;
+				background: #47a3ad ;
+				margin-left: 470px;
+				margin-top: 500px;
+				border-radius: 25px;
+			}
+			.imagecontainer5{
+			    position: absolute;
+			    height: 400px;
+				width: 20%;
+				background: #47a3ad;
+				margin-left: 20px;
+				margin-top: 500px;
+				border-radius: 25px;
+			}
+			.b:link, b:visited {
+                background-color: #31656b ;
+                color: white;
+                padding: 14px 25px;
+                text-align: center;
+                text-decoration: none;
+                display: inline-block;
+            }
+
+            .b:hover, .b:active {
+                background-color: #164045;
+            }
+			.containera{
 			    position: absolute;
 				height: 700px;
 				width: 1200px;
 				border: solid thin #000;
-				margin-top: 850px;
-				margin-left: 70px
+				margin-top: 970px;
+                margin-left: 70px;
 			}
-			.calculatorheader{
-			    position: absolute;
-			    height: 70px;
-				width: 1200px;
-				background: #4b9c89;
-			}
+			
+			/* Dropdown Button */
+.dropbtn {
+  background-color:  #a3ccbe;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
+}
+
+/* Dropdown button on hover & focus */
+.dropbtn:hover, .dropbtn:focus {
+  background-color: #79a395;
+}
+
+/* The container <div> - needed to position the dropdown content */
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+/* Dropdown Content (Hidden by Default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f1f1f1;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+
+/* Change color of dropdown links on hover */
+.dropdown-content a:hover {background-color: #ddd}
+
+/* Show the dropdown menu (use JS to add this class to the .dropdown-content container when the user clicks on the dropdown button) */
+.show {display:block;}
+
 			footer{
-			    height: 200px;
+			    height: 250px;
 				width: 1400px;
-				background: #4b9c89;
+				background: #47a3ad;
 				display: flex;
 			}
 			footer ul{
 			    list-style: none;
 		        display: list-item;
 			}
-			.footer li a: hover{
+			footer a{
+			    color: #ffffff;
+			}
+			footer li a: hover{
            		padding-right: 5px;
 				background-color: #5fe8d1;
 	        }
@@ -214,6 +298,9 @@
                 position: relative;		
 				color: #ffffff;
 			}
+			article p{
+			    color: #000;
+			}
 			p{
 			    color: #ffffff;
 				margin-left: 30px;
@@ -227,19 +314,21 @@
                 text-align: center;
                 text-decoration: none;
 			}
-			.fa:hover{
-			padding-top: 5px;
-			background-color: #5fe8d1;
-			}
+			@media(max-width: 700px) { 
+        .row{ 
+             flex-direction: column; 
+		}   
+    } 
+			
 		</style>
 	</head>
 	<body>
-	    
+	   
 	    <header>
 		    <div>
-	            <img src="logo.png" style="height: 100px; width: 400px; float: left;">
+	            <img src="logo.png" style="height: 90px; width: 400px; float: left;">
 			</div>
-			<div id="google_translate_element"></div> 
+			<div id="google_translate_element" style="margin-left: 1100px;"></div> 
 			
 			<script type="text/javascript"> 
                 function googleTranslateElementInit() { 
@@ -250,21 +339,27 @@
                 } 
             </script> 
       
-            <script type="text/javascript" src=
-"https://translate.google.com/translate_a/element.js?
-        cb=googleTranslateElementInit">
-            </script> 
+            <script type="text/javascript" src="https://translate.google.com/translate_a/element.js?cb=googleTranslateElementInit"></script> 
+			<div class="dropdown">
+                <button onclick="myFunction()" class="dropbtn" style="margin-left: 800px; margin-top: 50px;">Dropdown</button>
+                <div id="myDropdown" class="dropdown-content">
+                    <a href="feedback.html">Rate our system</a>
+                    <a href="quiz.html">QUIZ</a>
+                    <a href="#">Logout</a>
+                </div>
+            </div>
 		</header>
 		<nav>
 		    <ul>
-			    <li><a href="">HOME</a></li>
-				<li><a href="">CALCULATORS</a></li>
-				<li><a href="">INSIGHTS</a></li>
-				<li><a href="">DASHBOARD</a></li>
+			    <li><a href="index.html">HOME</a></li>
+				<li><a href="calculators.html">CALCULATORS</a></li>
+				<li><a href="insights.html">INSIGHTS</a></li>
+				<li><a href="food suggester.html">FOOD SUGGESTER</a></li>
 				<li><a href="food diary.html">FOOD DIARY</a></li>
 				<li><a href="contactus.html">CONTACT US</a></li>
-				<li><a href="logout.php">Logout</a></li>
+			      
 			</ul>
+			
 		</nav>
 		<article>
 		    <section>
@@ -280,16 +375,16 @@
 				        <!--radio buttons end-->
 				        <!--slide images start-->
 				        <div class="slide first">
-					        <img src="image5.jpg" alt="">
+					        <img src="https://i0.wp.com/post.healthline.com/wp-content/uploads/2021/06/grain-bowl-1296x728-header.jpg?w=1155&h=1528" alt="">
 				        </div>
 				        <div class="slide">
-					        <img src="image1.jpg" alt="">
+					        <img src= "image15.png" alt="">
 				        </div>
 				        <div class="slide">
-					        <img src="image2.jpg" alt="">
+					        <img src="image12.png" alt="">
 				        </div>
 				        <div class="slide">
-					        <img src="image3.jpg" alt="">
+					        <img src="image14.png" alt="">
 				        </div>
 				        <!--slide images end-->
 				        <!--automatic navigation start-->
@@ -312,40 +407,97 @@
 			    </div>
 			</section>
 			<section>
-			     <div class="imagecontainer1">
-			    <img src="https://www.onelovelylife.com/wp-content/uploads/2020/05/Peach-Berry-Fruit-Salad1C.jpg" height= "265px" width="100%">
-				<h1>Importance of vitamins in your body</h1>
+			    <div class="imagecontainer1">
+				    <p style="color: #ffffff; font-size: 20px;">In France we have a saying, 'Joie de vivre,' which actually doesn't exist in the English language. It means looking at your life as something that is to be taken with great pleasure and enjoy it.<p>
+					<p style="color: #ffffff;">Mireille Guiliano</p>
 			    </div>
 			</section>
 			<section>
-			     <div class="imagecontainer2">
-			    <img src="https://i.pinimg.com/236x/a1/8e/88/a18e88e147d04205a10f3c979486fcc2.jpg" height= "310px" width="100%">
-			    <h1>know your calorie intake</h1>
+			    <div class="imagecontainer2">
+			         <h1 style="text-align: center;">Health insights</h1>
+			        <p style="color: #ffffff;">Healthy Cooking On A Regular Basis Can Help Prevent Chronic Illnesses. the bones and organs, and depriving the body of essential nutrients. Such effects automatically put you at an increased risk of health problems including type 2 diabetes, stroke, heart disease, and more.</p>
+					<a href="insights.html" class="b">Learn more</a>
 				</div>
 			</section>
 			<section>
 			    <div class="imagecontainer3">
-			        <img src="https://i.pinimg.com/236x/68/d1/ae/68d1ae8ca1901e85cefa21001f5b2419.jpg" height= "300px" width="100%">
-					<h1>Weekly/monthly calorie intake</h1>
+			        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ1sV9FmAuOUfZEgvas0emY_tgYyTLqy4ys9A&usqp=CAU" height= "180px" width="340px">
 			    </div>
 				
 			</section>
 			<section>
-			    <div class="calculatorcontainer">
-				    <div class="calculatorheader">
-					    <ul>
-			                <li><a href="">IDEAL WEIGHT</a></li>
-				            <li><a href="">CALORIE AND BMI</a></li>
-				            <li><a href="">NUTRITION NEEDS</a></li>
-				            <li><a href="">FOOD CALORIE INTAKE</a></li>
-			            </ul>
-					</div>
+			    <div class="imagecontainer4">
+				    <h1 style="text-align: center;">QUIZ</h1>
+			        <p style="color: #ffffff;">feeling better mentally – regular exercise can lift your mood and help you feel better. saving money – eating junk food, smoking, and drinking sugary drinks or alcohol are all expensive habits. fewer health problems – living a healthier lifestyle means a lower risk of developing many </p>
+					<a href="quiz.html" class="b">TAKE QUIZ</a>
+			    </div>
+            </section>	
+			<section>
+			    <div class="imagecontainer5">
+				    <h1 style="text-align: center;">CALCULATORS</h1>
+			        <p style="color: #ffffff;">If people consumed only the number of calories needed every day, they would probably have healthy lives. Calorie consumption that is too low or too high will eventually lead to health problems. The number of calories in food tells us how much potential energy they contain.</p>
+					<a href="calculators.html" class="b">Know your calorie intake</a>
 			    </div>
 				
+            </section>
+            <section>
+                <div class="containera">
+				    <img src="image 16.png" height="700px" width="1200px" alt="">
+				</div>
+            </section>			
+		    <section>
+			    	<!-- CHAT BAR BLOCK -->
+    <div class="chat-bar-collapsible">
+        <button id="chat-button" type="button" class="collapsible">Chat with us!
+            <i id="chat-icon" style="color: #fff;" class="fa fa-fw fa-comments-o"></i>
+        </button>
+
+        <div class="content">
+            <div class="full-chat-block">
+                <!-- Message Container -->
+                <div class="outer-container">
+                    <div class="chat-container">
+                        <!-- Messages -->
+                        <div id="chatbox">
+                            <h5 id="chat-timestamp"></h5>
+                            <p id="botStarterMessage" class="botText"><span>Loading...</span></p>
+                        </div>
+
+                        <!-- User input box -->
+                        <div class="chat-bar-input-block">
+                            <div id="userInput">
+                                <input id="textInput" class="input-box" type="text" name="msg"
+                                    placeholder="Tap 'Enter' to send a message">
+                                <p></p>
+                            </div>
+
+                            <div class="chat-bar-icons">
+                                <i id="chat-icon" style="color: crimson;" class="fa fa-fw fa-heart"
+                                    onclick="heartButton()"></i>
+                                <i id="chat-icon" style="color: #333;" class="fa fa-fw fa-send"
+                                    onclick="sendButton()"></i>
+                            </div>
+                        </div>
+
+                        <div id="chat-bar-bottom">
+                            <p></p>
+                        </div>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+            </section>
+    </div>
+
 			</section>
+		
+			
+			
 		</article>
 		<footer>
-		   
+		    	
 		     <div class="container2">
 			    <div class="row">
 				    <div class="footer-col">
@@ -353,32 +505,35 @@
 					 <p>Food is a life source</p>
 					 <p>Calorie counting</p>
 					 <p>is a life sentence</p>
+					 <a href="" style="margin-top: 6px;">copyright policy</a>
+					  <a href="" style="margin-top: 6px;">Privacy rights</a>
 					</div>
+					
 					<div class="footer-col">
 					    <h4>Helpful links</h4>
 						<ul>
-						    <li><a href="">Calculators</a></li>
-				            <li><a href="">Insights</a></li>
-							<li><a href="">Invite friends</a></li>
+						    <li><a href="calculators.html">Calculators</a></li>
+				            <li><a href="insights.html">Insights</a></li>
+							<li><a href="https://www.facebook.com/Revolutionary-Life-102898755782764">Invite friends</a></li>
 						</ul>
 					</div>
 					<div class="footer-col">
-					    <h4>Copyright policy</h4>
+					    <h4></h4>
 					        <a href=""></a>
 				    </div>
 				    <div class="footer-col">
-				        <h4>Privacy Rights</h4>
+				        <h4></h4>
 				            <a href=""></a>
 				    </div>
 				    <div class="footer-col">
 				        <h4>Connect with us</h4>
-					        <a href="" class="fa fa-facebook"></a>
+					        <a href="https://www.facebook.com/Revolutionary-Life-102898755782764" class="fa fa-facebook"></a>
 						    <a href="https://www.instagram.com/revolutinary_life/" class="fa fa-instagram"></a>
                             <a href="https://twitter.com/Revolut96566044" class="fa fa-twitter"></a>
 					</div>
 				</div>
 			</div>
-	 
+	        
 		</footer>
 		<script type="text/javascript">
 			  var counter = 1;
@@ -389,8 +544,31 @@
 				  counter = 1;
 				}
 			  }, 5000);
-			  
+			  /* When the user clicks on the button,
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+  document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown menu if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
 		</script>
-		
+		<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+        <script src="static/scripts/responses.js"></script>
+        <script src="static/scripts/chat.js"></script>
+
+
+
     </body>
 </html>	
